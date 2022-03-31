@@ -32,3 +32,4 @@ To be able to properly use the functions, you also need an AWS account and a Mon
 ## To-do
 - Get the unit testing of getEquipments to work properly
 - Add integration testing
+- Prettify and improve the html page
