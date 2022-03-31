@@ -1,4 +1,5 @@
 import mongoose, { Mongoose } from 'mongoose'
+require('dotenv').config()
 
 export default async function connectToDatabase(db: Mongoose): Promise<Mongoose | void> {
   if (db) {

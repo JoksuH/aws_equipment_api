@@ -1,9 +1,10 @@
-import connectToDatabase from './db.js'
-import { equipment } from './models/equipmentModel.js'
+import connectToDatabase from './db'
+import { equipment } from './models/equipmentModel'
 import { Mongoose } from 'mongoose'
 import { APIGatewayProxyEvent, APIGatewayProxyResult  } from 'aws-lambda'
 
-let db: Mongoose | null
+//The database is kept outside the handler to allow possible reuse later.
+let db: Mongoose
 
 export const handler = async (event: APIGatewayProxyEvent, context): Promise<APIGatewayProxyResult> => {
 
@@ -24,13 +25,11 @@ export const handler = async (event: APIGatewayProxyEvent, context): Promise<API
         return {
             statusCode: 200,
             body: JSON.stringify(results),
-            headers: { 'Access-Control-Allow-Origin': '*'},
             };
     }
     catch (error) {
         return {
             statusCode: error.statusCode || 500,
-            headers: { 'Access-Control-Allow-Origin': '*'},
             body: error,
         };
     }

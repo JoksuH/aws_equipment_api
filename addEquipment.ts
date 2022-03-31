@@ -1,10 +1,10 @@
-import connectToDatabase from './db.js'
-import {equipment, equipmentData} from './models/equipmentModel.js'
+import connectToDatabase from './db'
+import {equipment, equipmentData} from './models/equipmentModel'
 import { Mongoose } from 'mongoose'
 import { APIGatewayProxyEvent, APIGatewayProxyResult  } from 'aws-lambda'
 
-
-let db: Mongoose | null
+//The database is kept outside the handler to allow possible reuse later.
+let db: Mongoose
 
 export const handler = async (event: APIGatewayProxyEvent, context): Promise<APIGatewayProxyResult> => {
 

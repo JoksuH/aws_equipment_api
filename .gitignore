@@ -6,10 +6,17 @@
 # production
 /build
 
+#testing
+jest.config
+jest.config.js
+babel.config.json
+
+
 # misc
 .DS_Store
 .env.local
 .env
+.babelrc
 .prettierrc
 .env.development.local
 .env.test.local
