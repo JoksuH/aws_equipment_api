@@ -17,7 +17,6 @@ beforeAll(async () => {
     })
     await equipment.save()
   })
-  mongoose.models = {}
 })
 
 afterAll(async () => {
