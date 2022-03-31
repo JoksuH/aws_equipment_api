@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 const LambdaTester = require('lambda-tester')
-const getEquipmentHandler = require('../getEquipment').handler
+const getEquipmentHandler = require('../functions/getEquipment').handler
 const dbHandler = require('./util/dbHandler')
 const data = require('./util/testData')
 const equipmentModel = require('./testModel/equipmentModel_test')

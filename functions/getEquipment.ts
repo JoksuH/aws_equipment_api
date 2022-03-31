@@ -1,5 +1,5 @@
-import connectToDatabase from './db'
-import { equipment } from './models/equipmentModel'
+import connectToDatabase from '../utils/db'
+import { equipment } from '../models/equipmentModel'
 import { Mongoose } from 'mongoose'
 import { APIGatewayProxyEvent, Context,  APIGatewayProxyResult  } from 'aws-lambda'
 
